@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibe Walk — Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      max-width: 640px;
+      margin: 3rem auto;
+      padding: 0 1.25rem;
+      line-height: 1.6;
+      color: #222;
+      background: #fafaf7;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; }
+    .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    a { color: #4a4a8a; }
+    code {
+      background: #ececec;
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+      color: #777;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Vibe Walk — Privacy Policy</h1>
+<p class="updated">Last updated: April 29, 2026</p>
+
+<p>
+  Vibe Walk is a personal-project ChatGPT GPT that turns a starting point, a
+  time window, and a vibe into a small walking itinerary. This policy explains
+  what data the GPT and its server-side action handle, and what we do (and
+  don't do) with it.
+</p>
+
+<h2>What we collect</h2>
+<p>
+  When you ask Vibe Walk to plan a walk, the GPT sends three things to our
+  server: your <strong>starting point</strong> (a Google Maps share link, an
+  address, or a place name you provided), the <strong>time window</strong>
+  you specified, and the <strong>mood</strong> you picked. We only see what
+  you explicitly send to plan a walk. We don't ask for your name, email,
+  account, location-from-GPS, contacts, calendar, or anything outside the
+  walk request.
+</p>
+
+<h2>What we do with it</h2>
+<p>
+  We use it to plan a walk, then we're done with it. Specifically:
+</p>
+<ul>
+  <li>The starting point is sent to Google Maps to resolve coordinates and find nearby stops.</li>
+  <li>The time window and mood shape the walk's structure server-side; they aren't sent anywhere else.</li>
+  <li>For operational logging (debugging and rate limiting), our server keeps short-lived records of <em>aggregate request shape only</em>: the mood, total minutes, neighborhood/area name, and how many stops were grounded. We do <strong>not</strong> log the raw start text you typed, your IP address beyond a short-lived rate-limit counter, or anything that identifies you personally.</li>
+</ul>
+
+<h2>Who we share it with</h2>
+<p>
+  Vibe Walk is built on three third-party services. Each receives the minimum
+  data needed to do its part of the job:
+</p>
+<ul>
+  <li>
+    <strong>Google Maps Platform</strong> (Geocoding, Places, Routes APIs) receives
+    your starting point and derived coordinates so we can resolve it and find
+    walkable stops. Subject to
+    <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.
+  </li>
+  <li>
+    <strong>OpenAI / ChatGPT</strong> hosts the conversation between you and
+    the Vibe Walk GPT. Subject to
+    <a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI's privacy policy</a>.
+  </li>
+  <li>
+    <strong>Vercel</strong> hosts the server-side action that plans the walk.
+    Vercel maintains standard request logs (timestamp, response status, etc.)
+    on its infrastructure. Subject to
+    <a href="https://vercel.com/legal/privacy-policy" rel="noopener">Vercel's privacy policy</a>.
+  </li>
+</ul>
+
+<h2>What we don't do</h2>
+<ul>
+  <li>No user accounts, no sign-in, no profile.</li>
+  <li>No tracking pixels, no analytics SDKs, no advertising.</li>
+  <li>No selling, sharing, or transferring your data to third parties beyond the operational ones above.</li>
+  <li>No persistent storage of your walk requests or any history of your walks.</li>
+</ul>
+
+<h2>Data retention</h2>
+<p>
+  Server-side caches that help speed up repeat requests (e.g. resolved place
+  data) live in memory and clear themselves on a short cycle. Operational
+  logs at our hosting provider follow that provider's default retention
+  (typically 30 days for routine logs, then deleted). We don't keep our own
+  copies beyond what's described here.
+</p>
+
+<h2>Your choices</h2>
+<p>
+  Stop using Vibe Walk at any time and we receive nothing further from you.
+  If you'd like us to remove a specific log entry that you believe identifies
+  you, or if you have any other privacy question, email us (see Contact below)
+  and we'll respond within 30 days.
+</p>
+
+<h2>Children</h2>
+<p>
+  Vibe Walk is not directed at children under 13 and we do not knowingly
+  collect data from children under 13.
+</p>
+
+<h2>Changes</h2>
+<p>
+  If we change this policy, we'll update the "Last updated" date at the top
+  of this page. Material changes will be reflected in the GPT's behavior or
+  description.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Questions or requests: <a href="mailto:angelatiliojimenez@gmail.com">angelatiliojimenez@gmail.com</a>.
+</p>
+
+<p class="footer">
+  Vibe Walk is a personal project, not a registered business. The author is the
+  sole maintainer and recipient of any privacy-related correspondence.
+</p>
+
+</body>
+</html>
